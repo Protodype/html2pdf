@@ -1,0 +1,26 @@
+{
+  "name": "html2pdf",
+  "version": "0.0.1",
+  "keywords": ["pdf", "html2pdf"],
+  "description": "Generate beautiful PDF files from HTML and CSS",
+  "homepage": "https://github.com/Protodype/html2pdf",
+  "license": "MIT",
+  "author": {
+    "name": "Alexey Kamenskiy",
+    "email": "aleksey.kamensky@gmail.com",
+    "url": "https://www.akamenskiy.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Protodype/html2pdf"
+  },
+  "private": false,
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^1.8.0",
+    "tmp": "^0.0.33",
+    "jsonschema": "^1.2.4"
+  }
+}
