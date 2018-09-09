@@ -4,8 +4,8 @@ const tmp = require("tmp");
 const fs = require("fs");
 const Validator = require("jsonschema").Validator;
 
-const HOSTNAME = process.env.LISTEN_HOST || "0.0.0.0";
-const PORT = process.env.LISTEN_PORT || 3000;
+const LISTEN_HOST = process.env.LISTEN_HOST || "0.0.0.0";
+const LISTEN_PORT = process.env.LISTEN_PORT || 3000;
 const CHROMIUM_BIN = process.env.CHROMIUM_BIN || '/usr/bin/chromium-browser';
 const CHROMIUM_ARGS = process.env.CHROMIUM_ARGS || '--headless --disable-gpu --no-sandbox';
 
@@ -110,11 +110,11 @@ let v = new Validator();
     const server = http.createServer(requestHandler);
 
     // Start listening on server
-    server.listen(PORT, HOSTNAME, (err) => {
+    server.listen(LISTEN_PORT, LISTEN_HOST, (err) => {
         if (err) {
             return console.log(err);
         }
 
-        console.log(`server is listening on ${HOSTNAME}:${PORT}`);
+        console.log(`server is listening on ${LISTEN_HOST}:${LISTEN_PORT}`);
     });
 })();
